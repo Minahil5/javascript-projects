@@ -1,0 +1,66 @@
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  font-family: "Poppins", sans-serif;
+}
+.stopwatch {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 30px;
+  border-radius: 20px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+  text-align: center;
+  width: 320px;
+  color: white;
+}
+#display {
+  font-size: 3em;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.buttons button {
+  flex: 1;
+  margin: 6px;
+  padding: 10px 14px;
+  font-size: 1em;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  color: white;
+  transition: all 0.3s;
+}
+#startBtn { background: #00c853; }
+#pauseBtn { background: #ff9100; }
+#resetBtn { background: #d50000; }
+#lapBtn   { background: #2979ff; }
+
+.buttons button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+#laps {
+  margin-top: 20px;
+  padding: 0;
+  list-style: none;
+  max-height: 150px;
+  overflow-y: auto;
+}
+#laps li {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 8px;
+  margin: 4px 0;
+  border-radius: 8px;
+  font-size: 0.9em;
+}

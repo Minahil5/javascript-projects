@@ -1,0 +1,115 @@
+:root {
+    --bg-start: #0f172a;
+    --bg-end: #1e293b;
+    --card: #111827;
+    --muted: #94a3b8;
+    --accent1: #0ea5e9;
+    --accent2: #0284c7;
+    --success: #4ade80;
+    --danger: #f87171;
+    --radius: 12px;
+    font-family: "Poppins", system-ui, Arial, sans-serif;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0
+}
+html,
+body {
+    height: 100%
+}
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--bg-start), var(--bg-end));
+    color: #e6eef8;
+    padding: 24px;
+}
+.card {
+    width: 100%;
+    max-width: 420px;
+    background: var(--card);
+    border-radius: var(--radius);
+    padding: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
+}
+h1 {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 6px;
+}
+p.lead {
+    text-align: center;
+    color: var(--muted);
+    font-size: 13px;
+    margin-bottom: 14px;
+}
+form {
+    display: grid;
+    gap: 12px
+}
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px
+}
+label {
+    font-size: 13px;
+    color: #cbd5e1;
+    font-weight: 600
+}
+input,
+textarea {
+    background: #0b1220;
+    color: #e6eef8;
+    border: 1px solid #263248;
+    padding: 10px 12px;
+    border-radius: 8px;
+    font-size: 14px;
+}
+input:focus {
+    outline: none;
+    border-color: var(--accent1);
+    box-shadow: 0 4px 12px rgba(14, 165, 233, 0.12);
+}
+.error {
+    color: var(--danger);
+    font-size: 12px;
+    display: none
+}
+.error.show {
+    display: block
+}
+.controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    margin-top: 6px
+}
+.status {
+    font-size: 13px;
+    color: var(--muted)
+}
+button {
+    background: linear-gradient(90deg, var(--accent2), var(--accent1));
+    color: #fff;
+    border: none;
+    padding: 10px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+}
+button[disabled] {
+    opacity: .6;
+    cursor: not-allowed
+}
+.valid {
+    border-color: var(--success) !important
+}
+.invalid {
+    border-color: var(--danger) !important
+}
